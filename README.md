@@ -11,7 +11,7 @@ El archivo resultante debe tener las siguientes características:
 * Se deben poder leer correctamente los caracteres especiales que estén presentes en los campos actuales del archivo. 
 * El encoding del archivo final debe ser UTF-8 (datos_de_santander.tsv es un archivo UTF-16LE)
 
-Preguntas y respuestas
+### Preguntas y respuestas
 * En qué requerimiento implementarías una cola de mensajes en una solución orientada a datos?  Que lenguaje utilizarías y porque?
 
 Implementaria una cola de mensajes en el caso que me pidan interaccion entre distintos microservicios, y que a su vez, necesiten trabajar de manera asincrona. 
@@ -20,6 +20,7 @@ Tambien en el caso que me pidan redundancia, ya que se puede dejar el mensaje ha
 
 
 * Que experiencia posees sobre py spark o spark scala? Contar breves experiencias, en caso de contar experiencia con otro framework de procesamiento distribuido, dar detalles también.
+
 No poseo experiencia ni con pyspark ni con spark scala. No tengo tampoco experiencia laboral con frameworks de procesamiento distribuido. 
 
 * Qué funcionalidad podrías expandir desde el area de ingeniería de datos con una API y arquitectónicamente como lo modelarías?
