@@ -1,21 +1,16 @@
-import pandas as pd
 import os
 import re
+import csv
 
 os.listdir('data-engineer-test-master')
+path = 'data-engineer-test-master/datos_data_engineer.tsv'
 
-def parser(path):
-    txt = open(path, encoding='UTF-16LE').read()
-    preparse = re.findall('(([^\t]*\t[^\t]*){4}(\n|\Z))', txt)
-    parsed = [t[0].split('\t') for t in preparse]
-    return pd.DataFrame(parsed)
+txt = open(path, encoding='UTF-16LE').read()
+preparse = re.findall('(([^\t]*\t[^\t]*){4}(\n|\Z))', txt)
+parsed = [t[0].split('\t') for t in preparse]
+replaced = [[item.replace('\n',' ').strip() for item in sublist] for sublist in parsed]
 
-
-df = parser('data-engineer-test-master/datos_data_engineer.tsv')
-df = df.replace('\n',' ', regex=True)
-df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
-new_header = df.iloc[0]
-df = df[1:]
-df.columns = new_header
-
-df.to_csv('data-engineer-test-master/datos_data_engineer.csv', index = False, encoding = 'UTF-8', sep = '|')
+file = open('datos_data_engineer.csv.csv', 'w+', newline ='', encoding = 'UTF-8') 
+with file:     
+    write = csv.writer(file, delimiter='|') 
+    write.writerows(replaced)

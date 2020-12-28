@@ -18,8 +18,9 @@ Implementaria una cola de mensajes en el caso que me pidan interaccion entre dis
 Esto a su vez permite mejorar la escalabilidad en el caso de agregar mas microservicios.
 Tambien en el caso que me pidan redundancia, ya que se puede dejar el mensaje hasta "confirmar"  que se recibio.
 
-Los lenguajes que utilizaria para la cola de mensajes serian los que estan orientados a objetos/clases, como por ejemplo Python/Java/Scala, aunque
-se pueda utilizar cualquier lenguaje, ya que lo importante esta en la implementacion de la cola, y no como dejar el mensaje.
+Los lenguajes que utilizaria para la cola de mensajes serian los que estan orientados a objetos/clases/actores, como por ejemplo Python/Java/Scala 
+ya que es mas facil modelar y desarrollar un sistema de microservicios de esta manera, aunque se pueda utilizar cualquier lenguaje 
+debido a que lo mas importante esta en la implementacion de la cola, y no como dejar el mensaje.
 
 
 * Que experiencia posees sobre py spark o spark scala? Contar breves experiencias, en caso de contar experiencia con otro framework de procesamiento distribuido, dar detalles también.
